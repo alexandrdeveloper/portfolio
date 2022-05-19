@@ -1,0 +1,20 @@
+.contact-list
+    padding-left: 0
+    margin-top: 50px
+    &__item 
+        padding-left: 0        
+        &::before 
+            display: none
+        i
+            display: inline
+            margin-right: 20px 
+            +transition
+        a 
+            color: $text 
+            +transition 
+            +medium
+        &:hover 
+            i 
+                color: $accent
+            a  
+                color: $text-light

@@ -1,0 +1,105 @@
+@import "./_b-logo"
+
+.b-header
+    position: fixed 
+    top: 0
+    left: 0
+    right: 0
+    background-color: transparent 
+    z-index: 20
+    +transition   
+    @media screen and (max-width: 767px)
+        position: relative  
+    &__container 
+        width: 100%
+        display: flex
+        justify-content: space-between
+        align-items: center
+        padding: 10px 40px
+        position: relative
+        height: auto 
+        +transition 
+            
+        @media screen and (max-width: 767px)
+            padding: 10px 15px 
+            height: auto 
+            justify-content: center
+            
+    &_scrolled
+        @media screen and (min-width: 768px)
+            // background-color: $bg-lighter 
+            // box-shadow: 0 0 10px $bg-darker
+            background: linear-gradient(145deg, #1a1a1a, #161616);
+            box-shadow:  5px 5px 10px #0f0f0f, -5px -5px 10px #212121
+        .b-header__container 
+            
+    &__contacts 
+        @media screen and ( max-width: 767px )
+            display: none
+            
+
+
+.b-nav
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    display: flex
+    @media screen and (max-width: 767px) 
+        position: fixed 
+        top: auto
+        bottom: 0
+        left: 0
+        right: 0 
+        transform: none 
+        flex-direction: row 
+        background-color: rgba($bg-lighter, .7) 
+        backdrop-filter: blur(8px)
+        border-top: 1px solid rgba($text-light, .1)
+    &__link 
+        display: inline-block
+        padding: 5px 20px
+        font-size: 20px
+        color: $text
+        font-weight: 100 
+        position: relative 
+        i.fa 
+            font-family: 'fa-lt' 
+            display: none
+            @media screen and (max-width: 991px)
+                display: inline-block
+        span 
+            +medium 
+            font-size: 16px
+            @media screen and (max-width: 991px)
+                display: none  
+        &:not(:last-child) 
+            &::after 
+                content: ''
+                display: block
+                width: 1px
+                height: 100%
+                position: absolute
+                top: 0
+                bottom: 0
+                right: 0 
+                background: linear-gradient(to top, transparent, rgba($accent, .8), rgba($text-light, .8), rgba($accent, .8), transparent)
+        @media screen and (max-width: 1440px) and (min-width: 768px)
+            font-size: 18px
+
+        @media screen and (max-width: 767px) 
+            flex: 1 
+            display: flex
+            justify-content: center
+            align-items: center
+            margin: 0      
+            text-align: center
+            height: 50px    
+        &:hover 
+            color: $accent
+        &_active
+            color: $accent 
+            &:hover 
+                color: $accent 
+    
+

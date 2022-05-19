@@ -1,0 +1,130 @@
+.project 
+    padding-top: 0
+    &-details
+        width: 100%
+       
+        &__item 
+            display: flex 
+            flex-wrap: nowrap
+            color: $text-light            
+            align-items: flex-start  
+            font-size: 16px 
+            
+            //&:not(:last-child)
+                //border-bottom: 1px solid rgba(#fff, .1)
+        &__title,
+        &__value 
+            width: 50%
+            padding: 10px 0 
+            @media screen and ( max-width: 576px )
+                font-size: 14px
+            p 
+                margin-bottom: 0
+        &__value 
+            padding-left: 10px
+            span 
+                color: $text
+        &__title 
+            +medium 
+            span 
+                color: $text-dark
+
+    &-photo 
+        position: relative
+        img, picture 
+            display: block
+            width: 100%
+            position: relative 
+            width: 100%
+            max-width: 700px 
+            margin-left: auto
+            margin-right: auto 
+
+
+    &-pages 
+        width: 100%
+        background: $bg-lighter 
+        margin-bottom: 30px
+        box-shadow: 5px 5px 20px $bg-darker
+        +shadow
+        &__header 
+            background: linear-gradient(110deg, $accent, $accent2)
+            padding: 30px 
+            @media screen and ( max-width: 576px )
+                padding: 15px
+                
+            span, p 
+                display: block
+                width: 100% 
+                color: $text-light
+            span 
+                +bold 
+                font-size: 20px 
+                @media screen and ( max-width: 576px )
+                    font-size: 18px
+            p 
+                +regular 
+                color: $text-light
+                margin-bottom: 0
+                @media screen and ( max-width: 576px )
+                    font-size: 16px
+
+        &__item 
+            display: flex
+            flex-direction: row 
+            padding: 15px  
+            @media screen and ( max-width: 991px ) and (min-width: 577px) 
+                width: 50% 
+                &:nth-child(even)
+                    border-left: 1px solid rgba($text, .1)
+            @media screen and ( max-width: 576px )    
+                width: 100%
+                    
+            &:not(:last-child)
+                border-bottom: 1px solid rgba($text, .1)
+            @media screen and ( max-width: 991px ) and (min-width: 577px)
+                &:nth-last-child(2)
+                    border-bottom: none
+            &:hover 
+                background-color: rgba($accent, .3)
+                span
+                    color: $text-light
+        &__list 
+            height: 300px 
+            overflow-y: auto 
+
+            @media screen and ( max-width: 991px )
+                height: auto 
+                display: flex
+                flex-direction: row
+                flex-wrap: wrap
+                
+        &__thumbnail 
+            width: 70px 
+            position: relative
+            width: 25%
+            overflow: hidden
+            &::before 
+                content: ''
+                display: block
+                width: 100%
+                padding-top: 100%
+
+            img 
+                display: block
+                width: 100% 
+                position: absolute
+                top: 0
+                left: 0
+                right: 0 
+        &__name 
+            padding: 0 15px
+            +medium 
+            color: $text 
+            font-size: 16px 
+            @media screen and ( max-width: 991px )
+                font-size: 14px
+                +regular
+            @media screen and ( max-width: 767px )
+                padding: 0 10px
+        

@@ -1,0 +1,92 @@
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #000
+
+*
+	padding: 0
+	margin: 0
+	box-sizing: border-box
+
+
+.b-page	
+	background: $bg-darker
+	font-size: 18px
+::-webkit-scrollbar
+	background: $bg-lighter 
+	width: 5px
+::-webkit-scrollbar-thumb 
+	background: linear-gradient(130deg, $accent, $accent2)
+::-webkit-scrollbar-thumb:hover 
+	background: linear-gradient(130deg, $accent2, $accent)
+
+a, a:hover 
+	text-decoration: none
+	
+	+transition 
+a:hover
+	color: $accent
+
+i.fa 
+	font-family: 'fa-lt', 'fa-br'
+	font-weight: 100 
+
+h1 
+	font-size: 34px
+	+light
+	color: $text-light 
+	@media screen and ( max-width: 576px )
+		font-size: 26px
+		
+h2 
+	font-size: 28px 
+	color: $text-light
+	+light 
+	@media screen and ( max-width: 576px )
+		font-size: 24px
+p a 
+	color: $accent
+
+ul 
+	list-style: none
+	li 
+		padding-left: 20px 
+		position: relative 
+		margin-bottom: 10px 
+		&::before 
+			content: ''
+			display: block
+			width: 10px
+			height: 1px
+			background-color: $text-dark 
+			position: absolute
+			left: 0
+			top: 14px
+.b-main
+    padding: 90px 0 
+    @media screen and (max-width: 991px)
+        padding: 75px 0px
+@media screen and (max-width: 576px)
+	.b-main 
+		padding-top: 30px
+    
+
+.b-wrapper 
+    min-height: 100%
+
+.b-title     
+    h1 
+        +light
+        color: $text
+    &_center 
+        text-align: center
+    &_pb30
+        padding-bottom: 30px
+@media screen and ( max-width: 576px )
+	.b-title_pb30
+		padding-bottom: 15px			
+
+strong 
+	color: $accent

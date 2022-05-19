@@ -1,0 +1,231 @@
+.theme-btn 
+    display: inline-block
+    justify-content: center
+    align-items: center
+    text-align: center
+    min-width: 200px 
+     
+    color: $text-light
+    font-size: 16px 
+    margin: 12px
+    +medium 
+    background: transparent 
+    cursor: pointer 
+    position: relative
+    background: linear-gradient(110deg, $accent, $accent2)
+    +shadow
+    border-radius: 50px 
+    border: none
+    transition: .2s
+    span 
+        display: flex
+        justify-content: center
+        align-items: center
+        padding: 16px 32px
+        position: relative 
+        i 
+            display: inline-block
+            position: absolute
+            top: 50%
+            right: 30px
+            transform: translateY(-50%)
+            +transition
+        
+    &:hover 
+        color: $text-light 
+        +shadowHover 
+        span 
+            i 
+                transform: translateY(-50%) translateX(10px)
+        
+        
+
+.btn-box
+    &_center 
+        display: flex
+        justify-content: center
+        align-items: center  
+        @media screen and ( max-width: 767px )
+            .theme-btn 
+                margin-top: 0
+            
+
+
+.b-breadcrumbs-list
+    display: flex
+    flex-wrap: nowrap
+    position: relative
+    width: auto 
+    margin-bottom: 30px
+    &::after 
+        content: ''
+        display: block
+        width: 100%
+        position: absolute
+        bottom: 0
+        left: 0
+        height: 1px
+        background: linear-gradient(to right, rgba($text-light, .2), rgba($accent, .2), transparent)
+    a, span 
+        display: inline-block
+        margin: 0 20px 
+        padding: 20px 0 
+        position: relative 
+        +medium
+        z-index: 2 
+        @media screen and ( max-width: 1440px )
+            font-size: 16px
+        @media screen and ( max-width: 576px )
+            font-size: 12px 
+            padding: 10px 0
+        &::after 
+            content: ''
+            display: block
+            position: absolute
+            width: 100%
+            left: 0
+            bottom: 0
+            height: 2px
+            background-color: #fff
+            opacity: 0
+        &:hover 
+            color: $text
+        &:first-child
+            margin-left: 0
+        &:last-child
+            margin-right: 0
+        &_active 
+            color: $text 
+            &::after 
+                opacity: 1
+    span 
+        color: $text-light
+        &:hover 
+            color: $text-light
+    a 
+        color: $text 
+        position: relative 
+        &::before 
+            content: ''
+            display: block
+            width: 8px
+            height: 8px
+            border-right: 1px solid $text
+            border-bottom: 1px solid $text 
+            transform: translateY(-30%) translateX(-50%) rotate(-45deg) 
+            position: absolute
+            left: calc(100% + 20px)
+            top: 50% 
+            @media screen and ( max-width: 576px )
+                width: 6px
+                height: 6px
+
+        &:hover 
+            color: $accent
+
+
+.b-filtering
+    padding-bottom: 30px
+.b-filter 
+    display: flex 
+    justify-content: flex-start
+    flex-wrap: nowrap
+    position: relative
+    width: auto 
+    &::after 
+        content: ''
+        display: block
+        position: absolute
+        bottom: 0
+        left: 0
+        right: 0
+        height: 2px
+        background: linear-gradient(to right, $accent, $accent2, transparent)
+        opacity: 0.4
+    &__item
+        margin: 0 20px 
+        padding: 12px 0 
+        color: $text
+        position: relative  
+        font-size: 16px
+        +medium
+        z-index: 2 
+        border: none 
+        background-color: transparent 
+        cursor: pointer 
+        transition: .2s ease-in
+        &:focus 
+            outline: none
+        @media screen and ( max-width: 767px )
+            margin: 0 10px 
+            padding: 10px 0 
+            font-size: 14px
+        @media screen and ( max-width: 576px )
+            margin: 0 8px 
+            padding: 10px 0 
+            font-size: 14px
+            
+        &::after 
+            content: ''
+            display: block
+            position: absolute
+            width: 100%
+            left: 0
+            bottom: 0
+            height: 2px
+            background-color: $accent
+            width: 0
+            transition: .2s ease-in
+        &:hover 
+            color: $text
+        &:first-child
+            margin-left: 0
+        &:last-child
+            margin-right: 0
+        &_active 
+            color: $accent
+            &::after 
+                width: 100% 
+
+.b-social 
+    display: flex
+    align-items: center
+    &__link 
+        color: $text 
+        margin-left: 20px
+        display: flex 
+        justify-content: center
+        align-items: center
+        width: 40px
+        height: 40px
+        border-radius: 50%
+        font-size: 18px  
+        background: $bg-darker
+        +shadow
+        i
+            font-weight: 100
+        @media screen and (max-width: 1440px) and (min-width: 768px)
+            font-size: 16px
+            width: 36px
+            height: 36px
+            margin-left: 14px
+        @media screen and ( max-width: 360px )
+            width: 30px 
+            height: 30px
+            margin-left: 10px 
+            i 
+                font-size: 14px
+            
+        &:hover 
+            border-color: $accent
+            color: $accent
+
+.theme-box 
+    padding: 15px 20px
+    width: 100%
+    margin-bottom: 30px
+    +shadow
+    &_light 
+        background-color: $bg-lighter
+        * 
+            color: $text-dark

@@ -1,0 +1,103 @@
+.b-plates 
+    &-item
+        width: 100%
+        background-size: cover
+        position: relative
+        display: block 
+        margin-bottom: 30px  
+        @media screen and ( max-width: 576px )
+            max-width: 360px
+            margin-left: auto
+            margin-right: auto
+        +transition 
+        +shadow
+        &:hover 
+            +shadowHover
+        &::before 
+            content: ''
+            display: block
+            width: 100%
+            padding-top: 150% 
+            @media screen and ( max-width: 576px )
+                padding-top: 120%
+                
+        &__info 
+            position: absolute
+            top: 0
+            left: 0
+            right: 0
+            bottom: 0
+            background: linear-gradient(to top, rgba($bg-lighter, .9), transparent)
+            display: flex
+            flex-direction: column
+            justify-content: flex-end 
+            align-items: flex-start
+            padding: 30px 
+            @media screen and ( max-width: 576px )
+                padding: 30px 15px 
+                align-items: center
+                text-align: center
+        &__title 
+            +medium
+            color: $text-light
+            font-size: 18px 
+            @media screen and ( max-width: 576px )
+                position: relative
+                padding-bottom: 10px
+                margin-bottom: 10px
+                &::after 
+                    content: ''
+                    display: block
+                    width: 40px
+                    height: 1px
+                    background-color: $text
+                    position: absolute
+                    bottom: 0
+                    left: 50%
+                    transform: translateX(-50%)
+        &__subtitle
+            +medium 
+            color: $text
+            font-size: 14px 
+        &__date 
+            +bold 
+            font-size: 14px
+            color: #cacaca
+    &__more 
+        box-sizing: border-box
+        border: none 
+        color: $text-light 
+        +medium 
+        height: 40px
+        width: 100%
+        font-size: 14px 
+        margin-top: 15px 
+        overflow: hidden 
+        opacity: 0
+        max-height: 0
+        +transition 
+        cursor: pointer 
+        position: relative 
+        background: linear-gradient(110deg, $accent, $accent2)
+        box-shadow: 5px 5px 20px $bg-darker 
+        border-radius: 50px
+        @media screen and ( max-width: 576px )
+            display: none
+        
+        span 
+            display: flex
+            justify-content: center
+            align-items: center
+            width: 100%
+            height: 100% 
+            position: relative
+            
+        &:focus 
+            outline: none
+        &:hover 
+            color: $text-light 
+            box-shadow: 0 0 20px rgba($accent, .9)
+    &-item:hover 
+        .b-plates__more 
+            max-height: 100px 
+            opacity: 1

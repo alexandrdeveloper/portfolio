@@ -1,0 +1,48 @@
+@import "_mixins/font-face"
+
+
++font-face("AvenirNextCyr-Regular", "../fonts/AvenirNextCyr-Regular/AvenirNextCyr-Regular")
++font-face("AvenirNextCyr-Medium", "../fonts/AvenirNextCyr-Medium/AvenirNextCyr-Medium")
++font-face("AvenirNextCyr-Bold", "../fonts/AvenirNextCyr-Bold/AvenirNextCyr-Bold")
++font-face("AvenirNextCyr-Heavy", "../fonts/AvenirNextCyr-Heavy/AvenirNextCyr-Heavy")
++font-face("AvenirNextCyr-Light", "../fonts/AvenirNextCyr-Light/AvenirNextCyr-Light")
++font-face("AvenirNextCyr-UltraLight", "../fonts/AvenirNextCyr-UltraLight/AvenirNextCyr-UltraLight")
++font-face("BeautyFont", "../fonts/BeautyFont/BeautyFont")
++font-face("BetterSaturday", "../fonts/BetterSaturday/BetterSaturday")
+@font-face 
+    font-family: 'fa-br'  
+    src: url('../fonts/Font Awesome 5 Brands-Regular-400.otf') format('OpenType')
+@font-face 
+    font-family: 'fa-lt'  
+    src: url('../fonts/Font Awesome 5 Pro-Light-300.otf') format('OpenType')
+@font-face 
+    font-family: 'fa-rg'  
+    src: url('../fonts/Font Awesome 5 Pro-Regular-400.otf') format('OpenType')
+@font-face 
+    font-family: 'fa-sd'  
+    src: url('../fonts/Font Awesome 5 Pro-Solid-900.otf') format('OpenType')
+@font-face 
+    font-family: 'fa'  
+    src: url('../fonts/FontAwesome.otf') format('OpenType')
+
+
+@mixin ul 
+    font-family: 'AvenirNextCyr-UltraLight', sans-serif
+    font-weight: 100
+@mixin regular 
+    font-family: 'AvenirNextCyr-Regular', sans-serif
+    font-weight: 400
+@mixin heavy 
+    font-family: 'AvenirNextCyr-Heavy', sans-serif
+    font-weight: 800
+@mixin bold
+    font-family: 'AvenirNextCyr-Bold', sans-serif
+    font-weight: 900
+@mixin medium
+    font-family: 'AvenirNextCyr-Medium', sans-serif
+    font-weight: 500
+@mixin light
+    font-family: 'AvenirNextCyr-Light', sans-serif
+    font-weight: 200
+@mixin saturday
+    font-family: 'BetterSaturday'

@@ -1,0 +1,33 @@
+$default-font: "helvetica-medium", sans-serif
+//$accent: #9c51e1
+$accent: #93fd70
+$rose: #e2336b 
+//$accent2: #6255f4
+$accent2: #447a7a
+$text-light: #fff
+$text: #a7a7a7
+$text-dark: #616161
+
+
+$bg-darker: #181818
+$bg-lighter: #1d1d1d
+
+$border-radius: 20px
+
+// Customization Bootstrap vars from "app/libs/bootstrap/scss/_variables.scss"
+$grid-gutter-width: 30px
+$grid-columns: 12
+$grid-breakpoints: (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px)
+$container-max-widths: (sm: 540px, md: 720px, lg: 960px, xl: 1200px)
+
+$gutter: $grid-gutter-width 
+
+$transition: .2s ease-in
+
+@mixin transition 
+    transition: $transition 
+
+@mixin shadow 
+    box-shadow:  5px 5px 10px #0f0f0f, -5px -5px 10px #212121 
+@mixin shadowHover
+    box-shadow:  0px 5px 10px $accent2, 0px -5px 10px $accent 

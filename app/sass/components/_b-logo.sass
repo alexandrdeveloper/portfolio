@@ -1,0 +1,36 @@
+.b-logo 
+    display: flex 
+    justify-content: center
+    align-items: center
+    color: $text-light
+    +saturday
+    font-size: 18px
+    line-height: 1 
+    border: 1px solid $text-light
+    //transform: rotate(45deg) 
+    width: 70px
+    height: 70px 
+    border-radius: 50%
+    border-left-color: transparent 
+    span 
+        display: inline-block
+        transform: rotate(-4deg) translateX(-18%)
+        position: relative 
+        //text-shadow: 0 0 4px $text-light 
+        line-height: 1 
+        font-weight: 100
+    &:hover 
+        border-color: $accent2
+        border-left-color: transparent
+        color: $text-light
+             
+    @media screen and (max-width: 1440px) and (min-width: 768px)
+        width: 50px
+        height: 50px
+        font-size: 12px
+    @media screen and (max-width: 767px) and (min-width: 577px)
+        height: 100px
+        width: 100px
+        font-size: 30px
+        line-height: 45px
+        text-align: center
